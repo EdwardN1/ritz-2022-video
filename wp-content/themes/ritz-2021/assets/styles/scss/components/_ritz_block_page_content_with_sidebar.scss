@@ -1,0 +1,246 @@
+.block-ritz-page-content-with-sidebar-block {
+  @include breakpoint(large) {
+    display: flex;
+    padding-top: 10px;
+  }
+  .page-content-desktop {
+    padding-top: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    @include breakpoint(large) {
+      padding-left: 105px;
+    }
+    /*position: relative;
+    display: inline-block;*/
+    .left {
+      max-width: 575px;
+      padding-right: 50px;
+      p {
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: 20px;
+      }
+    }
+    .right {
+      max-width: 370px;
+      @include breakpoint(large) {
+        width: 370px;
+      }
+      h2 {
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: $weight-medium;
+      }
+      .bullets {
+        border: 1px solid $light-gray;
+        padding: 50px;
+        padding-right: 30px;
+        padding-bottom: 34px;
+        ul {
+          margin: 0;
+          list-style-type: none;
+          li {
+            padding-bottom: 16px;
+            font-size: 15px;
+            line-height: 22px;
+            position: relative;
+            padding-left: 0;
+            @include breakpoint(large) {
+              padding-left: 1em;
+            }
+            a.link {
+              text-decoration: underline;
+            }
+            &:before {
+              content: "\2013";
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+          }
+        }
+      }
+      .buttons {
+        .button-row {
+          padding-top: 25px;
+          .button-container {
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border: 1px solid $light-gray;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .price-line {
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: $weight-medium;
+      padding-bottom: 40px;
+      text-transform: uppercase;
+      @include breakpoint(large) {
+        padding-top: 28px;
+        padding-bottom: 50px;
+      }
+    }
+    .footer-lines {
+      font-size: 14px;
+      font-weight: $weight-medium;
+      line-height: 18px;
+      text-transform: uppercase;
+      padding-top: 50px;
+    }
+  }
+
+  .page-content-mobile {
+    h1, h2 {
+      margin-bottom: 0;
+      padding-bottom: 10px;
+    }
+    .page-sidebar {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+      ul {
+        max-width: none;
+      }
+      @include breakpoint(large) {
+        max-width: 630px;
+        margin-top: 0;
+      }
+      .bullets {
+        .accordion {
+          margin-bottom: 0;
+          .accordion-item {
+            padding-left: 0;
+            .accordion-title {
+              font-size: 12px;
+              text-transform: uppercase;
+              background-color: $light-gray;
+              padding-bottom: 22px;
+              @include breakpoint(large) {
+                padding-bottom: 14px;
+              }
+              &:before {
+                height: 13px;
+                width: 13px;
+                border: none;
+                content: " ";
+                background-image: url(../images/menu-down-arrow.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+              }
+            }
+            .accordion-title[aria-expanded=true] {
+              &:before {
+                transform: scaleY(-1);
+                transform-origin: 50% 50%;
+              }
+            }
+            .accordion-content {
+              background-color: $light-gray;
+              padding-top: 0;
+              ul {
+                margin: 0;
+                list-style-type: none;
+                margin-left: 10px;
+                li {
+                  padding-bottom: 12px;
+                  font-size: 14px;
+                  line-height: 20px;
+                  text-indent: -10px;
+
+                  &:before {
+                    content: "- ";
+                    text-indent: -10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+    .booking-line {
+      text-align: center;
+      padding-top: 25px;
+      padding-bottom: 30px;
+    }
+    .price-line {
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: $weight-medium;
+      padding-bottom: 25px;
+      padding-top: 8px;
+      @include breakpoint(large) {
+        padding-top: 0;
+      }
+    }
+    .read-more {
+      padding-bottom: 25px;
+      button {
+        text-transform: uppercase;
+        color: $ritz-blue;
+        font-size: 12px;
+        font-weight: $weight-semi-bold;
+      }
+    }
+    .footer-lines {
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: $weight-medium;
+      @include letter-spacing(100);
+    }
+    .buttons {
+      margin-left: auto;
+      margin-right: auto;
+      @include breakpoint(large) {
+        max-width: 630px;
+      }
+      .button-row {
+        padding-top: 25px;
+        .button-container {
+          background-color: $light-gray;
+          text-align: center;
+          width: 100%;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          @include breakpoint(large) {
+            padding-top: 14px;
+            padding-bottom: 14px;
+          }
+        }
+      }
+    }
+    .page-content {
+      padding-top: 33px;
+      overflow: hidden;
+      transition: all 1s ease-in-out;
+      @include  breakpoint(large) {
+        padding-top: 25px;
+      }
+      .visible {
+        background: $white;
+        z-index: 10;
+      }
+      p {
+        margin: 0;
+        padding-bottom: 20px;
+        @include breakpoint(large) {
+          padding-bottom: 25px;
+        }
+      }
+    }
+  }
+}
+
+div[data-type="acf/ritz-page-content-with-sidebar-block"] {
+  &.wp-block {
+    width: 80%;
+    max-width: none;
+  }
+}

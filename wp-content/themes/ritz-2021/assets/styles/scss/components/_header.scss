@@ -1,0 +1,466 @@
+header.header {
+  position: relative;
+
+  .white-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+    background-color: $white;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+    height: 0;
+    @include breakpoint(large) {
+      top: 42px;
+    }
+    &.visible {
+      height: 62px;
+    }
+    transition: height 0.5s ease-in-out;
+    overflow: hidden;
+    .menu-button {
+      padding-top: 15px;
+    }
+    .logo {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      .ritz-logo {
+        width: 60px;
+        height: auto;
+      }
+    }
+
+    .links-social {
+      padding-top: 15px;
+
+    }
+
+    .link {
+      padding-left: 20px;
+      a {
+        color: $ritz-blue;
+        font-size: 10px;
+        font-weight: $weight-medium;
+        letter-spacing: 1px;
+        &:hover {
+          border-bottom: 1px solid $ritz-blue;
+        }
+        &.blue {
+          color: $ritz-blue;
+          &:hover {
+            border-bottom: 1px solid $ritz-blue;
+          }
+        }
+      }
+    }
+
+    .social {
+      .text-right {
+        padding-left: 14px;
+      }
+    }
+  }
+
+  .blue-top,.blue-bottom {
+    background-color: $ritz-blue;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    padding-top: 10px;
+    @include breakpoint(large) {
+      height: 42px;
+      padding-top: 6px;
+    }
+    .reservations {
+      padding-right: 10px;
+    }
+    .dining {
+      position: relative;
+      .dropdown-pane {
+        padding: 0;
+        border: none;
+        width: 100%;
+        .booking-line {
+          background-color: $ritz-blue;
+
+          a {
+            color: $white;
+            line-height: 28px;
+            line-height: 28px;
+            display: block;
+            padding: 0;
+            margin: 0;
+            border-left: 1px solid $white;
+            border-right: 1px solid $white;
+            border-top: 1px solid $white;
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: $weight-bold;
+            text-align: center;
+            width: 100%;
+            outline: none !important;
+            &:hover {
+              background-color: $white;
+              color: $ritz-blue;
+            }
+            @include breakpoint(large) {
+              border-top: none;
+              border-bottom: 1px solid $white;
+            }
+          }
+        }
+      }
+    }
+    .top-button {
+      color: $white;
+      line-height: 28px;
+      display: block;
+      padding: 0;
+      margin: 0;
+      border: 1px solid $white;
+      text-transform: uppercase;
+      font-size: 10px;
+      font-weight: $weight-bold;
+      padding-left: 18px;
+      padding-right: 18px;
+      &:hover {
+        background-color: $white;
+        color: $ritz-blue;
+      }
+      @include letter-spacing(100);
+      @include breakpoint(medium) {
+        padding-left: 36px;
+        padding-right: 36px;
+      }
+      &.dine-with-us {
+        position: relative;
+        padding-left: 18px;
+        padding-right: 37px;
+        @include breakpoint(medium) {
+          padding-left: 36px;
+          padding-right: 56px;
+        }
+        &:after {
+          content: " ";
+          position: absolute;
+          right: 21px;
+          top: 7px;
+          border: solid $white;
+          border-width: 0 1px 1px 0;
+          display: inline-block;
+          padding: 3px;
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          @include breakpoint(medium) {
+            right: 41px;
+          }
+        }
+        &.hover {
+          &:after {
+            border: solid $ritz-blue;
+            border-width: 0 1px 1px 0;
+            top: 11px;
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+          }
+        }
+      }
+      &.hover {
+        background-color: $white;
+        color: $ritz-blue;
+      }
+    }
+  }
+
+  .blue-bottom {
+    top: auto;
+    bottom: -1px;
+    > .grid-container {
+      padding-bottom: 1px;
+    }
+  }
+
+  .featured-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    .overlay {
+      width: 100%;
+      height: 100vh;
+      background-color: $black;
+      opacity: 0.1;
+      &:before {
+        content: " ";
+        background: linear-gradient(#000 0%, rgba(0, 0, 0, 0) 100%);
+        //opacity: 0.6;
+        height: 196px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      &:after {
+        content: " ";
+        background: linear-gradient(rgba(0, 0, 0, 0) 100%, #000 0%);
+        //opacity: 0.6;
+        height: 196px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    .featured-content {
+      position: absolute;
+      bottom: 75px;
+      width: 100%;
+
+      h1, h2 {
+        color: $white;
+        width: 100%;
+        text-align: center;
+        line-height: 1;
+        margin: 0;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        font-weight: $weight-medium;
+        padding-top: 35px;
+      }
+
+      h1 {
+        span.large {
+          font-size: 150px;
+          display: inline-block;
+          padding-bottom: 22px;
+          line-height: 1;
+        }
+      }
+    }
+
+  }
+
+  .header-spacer {
+    height: 120px;
+    @include breakpoint(medium) {
+      height: 160px;
+    }
+    @include breakpoint(large) {
+      height: 198px;
+    }
+    width: 100%;
+  }
+
+  .header-main {
+    position: absolute;
+    width: 100%;
+    color: white;
+    top: 20px;
+    color: $white;
+    z-index: 100;
+    @include breakpoint(medium) {
+      top: 30px;
+    }
+    @include breakpoint(large) {
+      top: 52px;
+    }
+
+    .menu-button {
+      /*padding-top: 32px;*/
+      @include breakpoint(large) {
+        padding-top: 20px;
+      }
+    }
+
+    .ritz-logo {
+      width: 95px;
+      @include breakpoint(medium) {
+        width: 135px;
+      }
+      height: auto;
+    }
+
+    .links-social {
+      /*padding-top: 25px;*/
+      @include breakpoint(large) {
+        padding-top: 38px;
+      }
+    }
+
+    .link {
+      padding-left: 20px;
+      a {
+        color: $white;
+        font-size: 10px;
+        font-weight: $weight-medium;
+        letter-spacing: 1px;
+        position: relative;
+        &:after {
+          content: " ";
+          background-color: $white;
+          height: 1px;
+          position: absolute;
+          bottom: 0;
+          left: 1px;
+          right: 1px;
+        }
+        &:hover {
+
+        }
+        &.blue {
+          color: $ritz-blue;
+          /*&:hover {
+            border-bottom: 1px solid $ritz-blue;
+          }*/
+        }
+
+      }
+    }
+
+    .social {
+      .text-right {
+        padding-left: 14px;
+      }
+    }
+  }
+
+  #ritz-main-image-gallery {
+    .slide-link {
+      display: block;
+      width: 100%;
+    }
+    .slide-container {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      .slide-overlay {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        background-color: $black;
+        opacity: 0.3;
+        &:before {
+          content: " ";
+          background: linear-gradient(#000 0%, rgba(0, 0, 0, 0) 100%);
+          //opacity: 0.6;
+          height: 196px;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        &:after {
+          content: " ";
+          background: linear-gradient(rgba(0, 0, 0, 0) 100%, #000 0%);
+          //opacity: 0.6;
+          height: 196px;
+          width: 100%;
+          position: absolute;
+          bottom: 35%;
+          left: 0;
+          @include breakpoint(medium) {
+            bottom: 0;
+          }
+        }
+        &.top-gradient {
+          background-color: transparent;
+          &:before {
+            content: " ";
+            background: linear-gradient(#000 0%, rgba(0, 0, 0, 0) 100%);
+            //opacity: 0.6;
+            height: 196px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+      /*.slide-huge {
+        font-size: 11.905vw;
+        text-align: center;
+        line-height: 1;
+        color: $white;
+        text-transform: uppercase;
+        position: absolute;
+        width: 100%;
+        bottom: 70%;
+        @include breakpoint(medium) {
+          bottom: 29%;
+        }
+        @include breakpoint(large) {
+          bottom: 160px;
+          font-size: 150px;
+        }
+      }*/
+      .slide-info {
+        position: absolute;
+        width: 100%;
+        bottom: 35%;
+        @include breakpoint(568) {
+          bottom: 15%;
+        }
+        @include breakpoint(large)
+        {
+          bottom: 75px;
+        }
+        h2, .sub-heading {
+          color: $white;
+          width: 100%;
+          text-align: center;
+          line-height: 1;
+          margin: 0;
+          width: 100%;
+          text-align: center;
+          text-transform: uppercase;
+          padding-left: 1em;
+          padding-right: 1em;
+        }
+        .sub-heading {
+          font-weight: $weight-medium;
+          padding-top: 25px;
+          @include breakpoint(large) {
+            padding-top: 35px;
+          }
+        }
+        .slide-huge {
+          font-size: 9vw;
+          text-align: center;
+          line-height: 1;
+          color: $white;
+          text-transform: uppercase;
+          width: 100%;
+          padding-bottom: 10px;
+          @include breakpoint(813) {
+            font-size: 11.905vw;
+          }
+          @include breakpoint(large) {
+            font-size: 150px;
+          }
+        }
+      }
+
+    }
+  }
+
+
+}
+
+.admin-bar {
+  header.header {
+    .blue-top {
+      top: 32px;
+    }
+    .white-top {
+      top: 82px;
+    }
+  }
+}

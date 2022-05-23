@@ -1,0 +1,129 @@
+.block-ritz-image-gallery-block {
+  .icontainer {
+    padding-top: 20px;
+    @include breakpoint(medium) {
+      padding-top: 40px;
+    }
+    @include breakpoint(medium) {
+      padding-top: 50px;
+    }
+    .caption {
+      margin-left: auto;
+      margin-right: auto;
+      width: 280px;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: $weight-semi-bold;
+      line-height: 14px;
+      padding-top: 20px;
+      @include breakpoint(medium) {
+        width: 324px;
+      }
+      @include breakpoint(large) {
+        width: 395px;
+      }
+    }
+    .image {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-left: auto;
+      margin-right: auto;
+      min-width: 280px;
+      width: 29vw;
+      position: relative;
+      @include breakpoint(medium) {
+        min-width: 324px;
+        width: 29vw;
+      }
+      @include breakpoint(large) {
+        max-width: 395px;
+        width: 29vw;
+      }
+      a {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url("../images/magnifier.svg");
+        background-position: bottom right;
+        background-size: 25px 25px;
+        background-repeat: no-repeat;
+        font-size: 0;
+        color: transparent;
+      }
+
+    }
+    &.y1 {
+      &.x1 {
+        .image {
+          max-height: 300px;
+          height: 22vw;
+        }
+      }
+      &.x2 {
+        .image {
+          max-height: 600px;
+          height: 44vw;
+        }
+      }
+      &.x3 {
+        .image {
+          max-height: 395px;
+          height: 29vw;
+        }
+      }
+    }
+    &.y2 {
+      &.x1 {
+        .image {
+          max-height: 600px;
+          height: 44vw;
+        }
+      }
+      &.x2 {
+        .image {
+          max-height: 300px;
+          height: 22vw;
+        }
+      }
+      &.x3 {
+        .image {
+          max-height: 600px;
+          height: 44vw;
+        }
+      }
+    }
+    &.y3 {
+      &.x1 {
+        .image {
+          max-height: 395px;
+          height: 29vw;
+        }
+      }
+      &.x2 {
+        .image {
+          max-height: 395px;
+          height: 29vw;
+        }
+      }
+      &.x3 {
+        .image {
+          max-height: 300px;
+          height: 22vw;
+        }
+      }
+    }
+  }
+}
+
+div[data-type="acf/ritz-offers-block"] {
+  &.wp-block {
+    width: 80%;
+    max-width: none;
+    .image {
+      width: 250px;
+      height: 200px;
+    }
+  }
+}
