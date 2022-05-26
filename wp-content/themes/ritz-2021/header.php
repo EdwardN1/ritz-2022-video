@@ -178,7 +178,8 @@ global $ritz_template_name;
                                                 ?>
                                             <?php endwhile; ?>
                                             <div class="booking-line">
-                                                <a href="#" <?php echo $book_data; ?>>The Ritz Restaurant</a>
+                                                <!--<a href="#" <?php /*echo $book_data; */?>>The Ritz Restaurant</a>-->
+                                                <a href="https://bookings.quadranet.co.uk/?slug=the_ritz_restaurant&brand=73" target="_blank">The Ritz Restaurant</a>
                                             </div>
                                         <?php endif; ?>
                                         <?php if (have_rows('afternoon_tea')) : ?>
@@ -194,7 +195,8 @@ global $ritz_template_name;
                                                 ?>
                                             <?php endwhile; ?>
                                             <div class="booking-line">
-                                                <a href="#" <?php echo $book_tea_data; ?>>Afternoon Tea</a>
+                                                <!--<a href="#" <?php /*echo $book_tea_data; */?>>Afternoon Tea</a>-->
+                                                <a href="https://bookings.quadranet.co.uk/?slug=the_ritz_afternoon_tea&brand=73" target="_blank">Afternoon Tea</a>
                                             </div>
                                         <?php endif; ?>
                                         <?php /*if ( have_rows( 'the_ritz_garden' ) ) : */ ?><!--

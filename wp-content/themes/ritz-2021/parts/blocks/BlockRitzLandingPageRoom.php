@@ -170,7 +170,9 @@ endif;
 							if ( $booking_options == 'Bookatable' ) {
 								if ( have_rows( 'dining_codes' ) ) :
 									$book_data = '';
+                                    $restaurantid = '';
 									while ( have_rows( 'dining_codes' ) ) : the_row();
+                                        $restaurantid = get_sub_field('restaurantid');
 										$book_data = ' data-bookatable data-connectionid="' . get_sub_field( 'connectionid' ) . '"';
 										$book_data .= ' data-restaurantid="' . get_sub_field( 'restaurantid' ) . '"';
 										$book_data .= ' data-basecolor="' . get_sub_field( 'basecolor' ) . '"';
@@ -181,9 +183,10 @@ endif;
 									endwhile;
 									if ( $book_data != '' ) {
 										?>
-                                        <a href="#" <?php echo $book_data; ?>
-                                           class="button-ritz"><?php echo $booking_link_text; ?></a>
+                                        <!--<a href="#" <?php /*echo $book_data; */?>
+                                           class="button-ritz"><?php /*echo $booking_link_text; */?></a>-->
 										<?php
+                                        echo rid_to_quadranet_link($restaurantid, $booking_link_text);
 									}
 								endif;
 							};

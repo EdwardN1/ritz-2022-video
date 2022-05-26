@@ -70,7 +70,9 @@ endif;
 							if ( $booking_type == 'Restaurant' ) {
 								if ( have_rows( 'the_ritz_restaurant' ) ) :
 									$book_data = '';
+                                    $restaurantid = '';
 									while ( have_rows( 'the_ritz_restaurant' ) ) : the_row();
+                                        $restaurantid = get_sub_field('restaurantid');
 										$book_data = ' data-bookatable data-connectionid="' . get_sub_field( 'connectionid' ) . '"';
 										$book_data .= ' data-restaurantid="' . get_sub_field( 'restaurantid' ) . '"';
 										$book_data .= ' data-basecolor="' . get_sub_field( 'basecolor' ) . '"';
@@ -81,16 +83,19 @@ endif;
 									endwhile;
 									if ( $book_data != '' ) {
 										?>
-                                        <a href="#" <?php echo $book_data; ?>
-                                           class="button-ritz"><?php echo $booking_link_text; ?></a>
+                                        <!--<a href="#" <?php /*echo $book_data; */?>
+                                           class="button-ritz"><?php /*echo $booking_link_text; */?></a>-->
 										<?php
+                                        echo rid_to_quadranet_link($restaurantid, $booking_link_text);
 									}
 								endif;
 							}
 							if ( $booking_type == 'Tea' ) {
 								if ( have_rows( 'afternoon_tea' ) ) :
 									$book_data = '';
+                                    $restaurantid = '';
 									while ( have_rows( 'afternoon_tea' ) ) : the_row();
+                                        $restaurantid = get_sub_field('restaurantid');
 										$book_data = ' data-bookatable data-connectionid="' . get_sub_field( 'connectionid' ) . '"';
 										$book_data .= ' data-restaurantid="' . get_sub_field( 'restaurantid' ) . '"';
 										$book_data .= ' data-basecolor="' . get_sub_field( 'basecolor' ) . '"';
@@ -101,16 +106,19 @@ endif;
 									endwhile;
 									if ( $book_data != '' ) {
 										?>
-                                        <a href="#" <?php echo $book_data; ?>
-                                           class="button-ritz"><?php echo $booking_link_text; ?></a>
+                                        <!--<a href="#" <?php /*echo $book_data; */?>
+                                           class="button-ritz"><?php /*echo $booking_link_text; */?></a>-->
 										<?php
+                                        echo rid_to_quadranet_link($restaurantid, $booking_link_text);
 									}
 								endif;
 							}
 							if ( $booking_type == 'Garden' ) {
 								if ( have_rows( 'the_ritz_garden' ) ) :
 									$book_data = '';
+                                    $restaurantid = '';
 									while ( have_rows( 'the_ritz_garden' ) ) : the_row();
+                                        $restaurantid = get_sub_field('restaurantid');
 										$book_data = ' data-bookatable data-connectionid="' . get_sub_field( 'connectionid' ) . '"';
 										$book_data .= ' data-restaurantid="' . get_sub_field( 'restaurantid' ) . '"';
 										$book_data .= ' data-basecolor="' . get_sub_field( 'basecolor' ) . '"';
@@ -121,9 +129,10 @@ endif;
 									endwhile;
 									if ( $book_data != '' ) {
 										?>
-                                        <a href="#" <?php echo $book_data; ?>
-                                           class="button-ritz"><?php echo $booking_link_text; ?></a>
+                                        <!--<a href="#" <?php /*echo $book_data; */?>
+                                           class="button-ritz"><?php /*echo $booking_link_text; */?></a>-->
 										<?php
+                                        echo rid_to_quadranet_link($restaurantid, $booking_link_text);
 									}
 								endif;
 							}
@@ -429,7 +438,9 @@ endif;
 				if ( $booking_type == 'Restaurant' ) {
 					if ( have_rows( 'the_ritz_restaurant' ) ) :
 						$book_data = '';
+                        $restaurantid = '';
 						while ( have_rows( 'the_ritz_restaurant' ) ) : the_row();
+                            $restaurantid = get_sub_field('restaurantid');
 							$book_data = ' data-bookatable data-connectionid="' . get_sub_field( 'connectionid' ) . '"';
 							$book_data .= ' data-restaurantid="' . get_sub_field( 'restaurantid' ) . '"';
 							$book_data .= ' data-basecolor="' . get_sub_field( 'basecolor' ) . '"';
@@ -440,16 +451,19 @@ endif;
 						endwhile;
 						if ( $book_data != '' ) {
 							?>
-                            <a href="#" <?php echo $book_data; ?>
-                               class="button-ritz"><?php echo $booking_link_text; ?></a>
+                            <!--<a href="#" <?php /*echo $book_data; */?>
+                               class="button-ritz"><?php /*echo $booking_link_text; */?></a>-->
 							<?php
+                            echo rid_to_quadranet_link($restaurantid, $booking_link_text);
 						}
 					endif;
 				}
 				if ( $booking_type == 'Tea' ) {
 					if ( have_rows( 'afternoon_tea' ) ) :
 						$book_data = '';
+                        $restaurantid = '';
 						while ( have_rows( 'afternoon_tea' ) ) : the_row();
+                            $restaurantid = get_sub_field('restaurantid');
 							$book_data = ' data-bookatable data-connectionid="' . get_sub_field( 'connectionid' ) . '"';
 							$book_data .= ' data-restaurantid="' . get_sub_field( 'restaurantid' ) . '"';
 							$book_data .= ' data-basecolor="' . get_sub_field( 'basecolor' ) . '"';
@@ -460,16 +474,19 @@ endif;
 						endwhile;
 						if ( $book_data != '' ) {
 							?>
-                            <a href="#" <?php echo $book_data; ?>
-                               class="button-ritz"><?php echo $booking_link_text; ?></a>
+                            <!--<a href="#" <?php /*echo $book_data; */?>
+                               class="button-ritz"><?php /*echo $booking_link_text; */?></a>-->
 							<?php
+                            echo rid_to_quadranet_link($restaurantid, $booking_link_text);
 						}
 					endif;
 				}
 				if ( $booking_type == 'Garden' ) {
 					if ( have_rows( 'the_ritz_garden' ) ) :
 						$book_data = '';
+                        $restaurantid = '';
 						while ( have_rows( 'the_ritz_garden' ) ) : the_row();
+                            $restaurantid = get_sub_field('restaurantid');
 							$book_data = ' data-bookatable data-connectionid="' . get_sub_field( 'connectionid' ) . '"';
 							$book_data .= ' data-restaurantid="' . get_sub_field( 'restaurantid' ) . '"';
 							$book_data .= ' data-basecolor="' . get_sub_field( 'basecolor' ) . '"';
@@ -480,9 +497,10 @@ endif;
 						endwhile;
 						if ( $book_data != '' ) {
 							?>
-                            <a href="#" <?php echo $book_data; ?>
-                               class="button-ritz"><?php echo $booking_link_text; ?></a>
+                            <!--<a href="#" <?php /*echo $book_data; */?>
+                               class="button-ritz"><?php /*echo $booking_link_text; */?></a>-->
 							<?php
+                            echo rid_to_quadranet_link($restaurantid, $booking_link_text);
 						}
 					endif;
 				}
