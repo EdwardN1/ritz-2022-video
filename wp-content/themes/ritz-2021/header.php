@@ -109,6 +109,9 @@ global $ritz_template_name;
                                         <?php /*echo rid_to_quadranet_link($restaurantid, 'Afternoon Tea');*/?>
                                     </div>
                                 <?php endif; ?>
+                                <div class="booking-line">
+                                    <a href="https://bookings.quadranet.co.uk/?slug=the_ritz_garden&brand=73" target="_blank">The Ritz Garden</a>
+                                </div>
                                 <?php /*if ( have_rows( 'the_ritz_garden' ) ) : */ ?><!--
 									<?php /*while ( have_rows( 'the_ritz_garden' ) ) : the_row(); */ ?>
 										<?php
@@ -207,6 +210,9 @@ global $ritz_template_name;
                                                 <a href="https://bookings.quadranet.co.uk/?slug=the_ritz_afternoon_tea&brand=73" target="_blank">Afternoon Tea</a>
                                             </div>
                                         <?php endif; ?>
+                                        <div class="booking-line">
+                                            <a href="https://bookings.quadranet.co.uk/?slug=the_ritz_garden&brand=73" target="_blank">The Ritz Garden</a>
+                                        </div>
                                         <?php /*if ( have_rows( 'the_ritz_garden' ) ) : */ ?><!--
 									<?php /*while ( have_rows( 'the_ritz_garden' ) ) : the_row(); */ ?>
 										<?php

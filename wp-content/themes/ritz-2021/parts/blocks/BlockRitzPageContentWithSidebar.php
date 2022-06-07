@@ -270,6 +270,9 @@ endif;
 														if ( $popup_content == 'The Ritz Garden Sittings' ) {
 															echo get_field( 'the_ritz_garden_sittings', 'option' );
 														}
+                                                        if ( $popup_content == 'The Ritz Garden Entertainment' ) {
+                                                            echo get_field( 'the_ritz_garden_entertainment', 'option' );
+                                                        }
 														if ( $popup_content == 'Afternoon Tea Sittings' ) {
 															echo get_field( 'afternoon_tea_sittings', 'option' );
 														}
@@ -627,6 +630,9 @@ endif;
 													if ( $popup_content == 'The Ritz Garden Sittings' ) {
 														echo get_field( 'the_ritz_garden_sittings', 'option' );
 													}
+                                                    if ( $popup_content == 'The Ritz Garden Entertainment' ) {
+                                                        echo get_field( 'the_ritz_garden_entertainment', 'option' );
+                                                    }
 													if ( $popup_content == 'Afternoon Tea Sittings' ) {
 														echo get_field( 'afternoon_tea_sittings', 'option' );
 													}
