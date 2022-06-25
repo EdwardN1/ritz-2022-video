@@ -154,9 +154,9 @@ global $no_menu_page;
                         style="background-image: url(<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>);"
                     <?php endif; ?>></div>
                     <h2 class="text-center"><?php the_sub_field('line_1'); ?></h2>
-                    <h3 class="text-center"><?php the_sub_field('line_2'); ?></h3>
-                    <h2 class="text-center"><?php the_sub_field('line_3'); ?></h2>
-                    <div class="grid-x">
+                    <h2 class="text-center" style="padding-bottom: 5px; padding-top: 0;"><?php the_sub_field('line_2'); ?></h2>
+                    <h2 class="text-center" style="padding-top: 0; padding-bottom: 5px;"><?php the_sub_field('line_3'); ?></h2>
+                    <div class="grid-x" style="padding-top: 25px;">
                         <div class="cell auto text-center">
                             <a href="<?php echo get_sub_field('page_link'); ?>"
                                class="button-underline"><?php the_sub_field('link_text'); ?></a>
